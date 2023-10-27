@@ -1,6 +1,7 @@
-import { Search, ShoppingBag } from 'lucide-react'
+import { Search } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { CartWidget } from './cart-widget'
 
 export function Header() {
   return (
@@ -19,12 +20,7 @@ export function Header() {
         </form>
       </div>
       <div className="flex items-center gap-4">
-        <div className="relative flex items-center gap-2">
-          <ShoppingBag className="h-5 w-5 text-white" />
-          <span className="absolute -bottom-1 -right-1 flex h-3 w-3 items-center justify-center rounded-full bg-violet-400 text-xs text-white">
-            0
-          </span>
-        </div>
+        <CartWidget />
         <div className="h-4 w-px bg-zinc-700"></div>
         <Link
           href="/profile"
